@@ -66,26 +66,52 @@
 }
 
 /*------------------------------------Table-------------- */
+.tbody {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+
 .table {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border: 1px solid #ccc;
   border-collapse: collapse;
-  width: 100%;
-  text-align: center;
+  margin: 0;
+  margin-left: 12.5%;
+  padding: 0;
+  width: 75%;
+  table-layout: fixed;
 }
- .ul_max {
-  width: 100%;
- }
 
-.table_td,
-.table_th {
+.table_caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+.table_tr {
+  background-color: #1a1a1a;
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: .35em;
+}
+
+.table_th,
+.table_td {
+  padding: .625em;
   text-align: center;
 }
 
-.table_tr:nth-child(even){background-color: #0c0c0c;}
+.table_th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
 
-.table_tr:hover {background-color: rgb(14, 14, 14);}
+.table_tr:nth-child(even){
+  background-color: #0c0c0c;
+  padding: .35em;
+}
+
+.table_tr:hover {
+  background-color: rgb(14, 14, 14);
+}
 
 .table_th {
   padding-top: 12px;
@@ -93,7 +119,11 @@
   text-align: center;
   background-color: #0070f3;
   color: white;
+  font-size: .85em;
+  letter-spacing: .1em;
 }
+
+.mobilediv {overflow-x:auto;}
 
 .input {
   width: 100%;
@@ -263,5 +293,56 @@
 
     max-width: 800px;
     margin-top: 3rem;
+  }
+
+  .mobilediv {overflow-x:auto;}
+
+  .table {
+    border: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .table_caption {
+    font-size: 1.3em;
+  }
+
+  .table_thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .table_tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  .table_td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  .table_td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .table_td:last-child {
+    border-bottom: 0;
   }
 }

@@ -22,34 +22,39 @@ export default function Statistics() {
     return (
         <div className={styles.container}>
             <main className={styles.main}>
-                <h1 className={styles.title}>Statistics page</h1>
-
-                <table className={styles.table}>
-                    <tr className={styles.table_tr}>
-                        <th className={styles.table_th}>Date</th>
-                        <th className={styles.table_th}>Room name</th>
-                        <th className={styles.table_th}>Device</th>
-                        <th className={styles.table_th}>Max temperature</th>
-                        <th className={styles.table_th}>Average temperature</th>
-                        <th className={styles.table_th}>Lowest temperature</th>
-                        <th className={styles.table_th}>Max light level</th>
-                        <th className={styles.table_th}>Average light level</th>
-                        <th className={styles.table_th}>lowest light level</th>
-                    </tr>
-                    {tables.map(table =>
-                        <tr className={styles.table_tr} key={table.id}>
-                                <td> {table.Date}</td>
-                                <td> {table.Room_Name}</td>
-                                <td> {table.Device_Name}</td>
-                                <td> {table.Temperature_Max}</td>
-                                <td> {table.Temperature_Average}</td>
-                                <td> {table.Temperature_Low}</td>
-                                <td> {table.Light_Max}</td>
-                                <td> {table.Light_Level_Average}</td>
-                                <td> {table.Light_Low}</td>
-                        </tr>
-                    )}
-                </table>
+                <div className={styles.mobilediv}>
+                    <table className={styles.table}>
+                        <caption className={styles.table_caption}>Statistics page</caption>
+                        <thead className={styles.table_thead}>
+                            <tr className={styles.table_tr}>
+                                <th scope="col" className={styles.table_th}>Date</th>
+                                <th scope="col" className={styles.table_th}>Room name</th>
+                                <th scope="col" className={styles.table_th}>Device</th>
+                                <th scope="col" className={styles.table_th}>Max temperature</th>
+                                <th scope="col" className={styles.table_th}>Average temperature</th>
+                                <th scope="col" className={styles.table_th}>Lowest temperature</th>
+                                <th scope="col" className={styles.table_th}>Max light level</th>
+                                <th scope="col" className={styles.table_th}>Average light level</th>
+                                <th scope="col" className={styles.table_th}>lowest light level</th>
+                            </tr>
+                        </thead>
+                        <tbody className={styles.tbody}>
+                            {tables.map(table =>
+                                <tr className={styles.table_tr} key={table.id}>
+                                    <td data-label="Date" className={styles.table_td}> {table.Date}</td>
+                                    <td data-label="Room name" className={styles.table_td}> {table.Room_Name}</td>
+                                    <td data-label="Device" className={styles.table_td}> {table.Device_Name}</td>
+                                    <td data-label="Max temperature" className={styles.table_td}> {table.Temperature_Max}</td>
+                                    <td data-label="Average temperature" className={styles.table_td}> {table.Temperature_Average}</td>
+                                    <td data-label="Lowest temperature" className={styles.table_td}> {table.Temperature_Low}</td>
+                                    <td data-label="Max light level" className={styles.table_td}> {table.Light_Max}</td>
+                                    <td data-label="Average light level" className={styles.table_td}> {table.Light_Level_Average}</td>
+                                    <td data-label="lowest light level" className={styles.table_td}> {table.Light_Low}</td>
+                                </tr>
+                            )}
+                        </tbody>
+                    </table>
+                </div>
             </main >
 
             <footer className={styles.footer}>
