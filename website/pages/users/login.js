@@ -41,7 +41,18 @@ const Login = () => {
                     </form>
                 </div>
             </main>
+
+            <footer className={styles.footer}>
+                <a
+                    /* href="#" */
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Made by: {' '}
+                    <img src="/Ausama95.png" alt="Ausama95 Logo" className={styles.logo} />
+                </a>
+            </footer>
         </div>
-  )
+    )
 }
 export default Login

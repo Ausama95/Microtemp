@@ -196,6 +196,13 @@
   font-size: 1.5rem;
 }
 
+.description2 {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  color: red;
+  text-align: center;
+}
+
 .code {
   background: #111213;
   border-radius: 5px;

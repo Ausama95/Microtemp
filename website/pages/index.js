@@ -15,6 +15,7 @@ export default function Home({ microNumber }) {
   const user = fire.auth().currentUser;
   const [notification, setNotification] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
+  const time = Math.round(new Date().getTime()/ 1000)
 
   fire.auth()
     .onAuthStateChanged((user) => {
@@ -59,17 +60,88 @@ export default function Home({ microNumber }) {
     return <Error title="Please wait.." />;
   }
 
-  const handleLogout = () => {
-    fire.auth()
-      .signOut()
-      .then(() => {
-        setNotification('Logged out')
-        setTimeout(() => {
-          setNotification('')
-        }, 2000)
-      });
+  // ------------------------------------------------------If Chep is online--------------
+  if (data.Timestamp > time - 10) {
+    return (
+      <div className={styles.container}>
+        <Head>
+          <title>Microtemp</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+
+        <main className={styles.main}>
+          <h1 className={styles.title}>
+            Welcome to <a href="#">Microtemp</a>
+          </h1>
+
+          <p className={styles.description}>
+            Room name: {' '}
+            <code className={styles.code}>-</code>
+          </p>
+
+          <p className={styles.description}>
+            Chip name: {' '}
+            <code className={styles.code}>-</code>
+          </p>
+
+          <p className={styles.description2}>
+            The Microbit is offline!
+          </p>
+
+          {loggedIn && <Link href="/users/edit_info">
+            <a className={styles.btn}> Edit</a>
+          </Link>}
+
+          <div className={styles.grid_left}>
+            <a href="#" className={styles.card}>
+              <h3>Max temperature</h3>
+              <p>0 C</p>
+            </a>
+
+            <a href="#" className={styles.card2}>
+              <h3>Current temperature</h3>
+              <p>0 C</p>
+            </a>
+
+            <a href="#" className={styles.card}>
+              <h3>Lowest temperature</h3>
+              <p>0 C</p>
+            </a>
+          </div>
+
+          <div className={styles.grid_left}>
+            <a href="#" className={styles.card}>
+              <h3>Max light level</h3>
+              <p>0</p>
+            </a>
+
+            <a href="#" className={styles.card2}>
+              <h3>Current light level</h3>
+              <p>0</p>
+            </a>
+
+            <a href="#" className={styles.card}>
+              <h3>Lowest light level</h3>
+              <p>0</p>
+            </a>
+          </div>
+        </main>
+
+        <footer className={styles.footer}>
+          <a
+            /* href="#" */
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Made by: {' '}
+            <img src="/Ausama95.png" alt="Ausama95 Logo" className={styles.logo} />
+          </a>
+        </footer>
+      </div>
+    )
   }
 
+  // ------------------------------------------------------If live--------------
   return (
     <div className={styles.container}>
       <Head>
@@ -79,7 +151,6 @@ export default function Home({ microNumber }) {
 
       <main className={styles.main}>
 
-        {/* {notification}
         {!loggedIn
           ?
           <div>

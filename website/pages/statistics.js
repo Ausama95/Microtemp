@@ -9,6 +9,7 @@ export default function Statistics() {
             .collection("Microbit")
             .doc("Doc")
             .collection("collected_data")
+            .orderBy("Timestamp", "desc")
             .onSnapshot(snap => {
                 const tables = snap.docs.map(doc => ({
                     id: doc.id,
@@ -18,7 +19,7 @@ export default function Statistics() {
             });
     }, []);
     console.log(tables)
-
+    
     return (
         <div className={styles.container}>
             <main className={styles.main}>
