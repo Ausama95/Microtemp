@@ -286,6 +286,12 @@
   height: 1em;
 }
 
+.aboutsection {
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
@@ -309,6 +315,9 @@
     width: 100%;
     margin-left: 0;
   }
+}
+
+@media (max-width: 1024px){
 
   .table_caption {
     font-size: 1.3em;
