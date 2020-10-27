@@ -52,6 +52,11 @@ function Header() {
                         margin: 0;
                         padding: 0;
                     }
+
+                    div {
+                        margin: 0;
+                        padding: 0;
+                    }
                     
                     ul a {
                         float: left;
@@ -104,6 +109,11 @@ function Header() {
                         padding: 0;
                     }
                     
+                    div {
+                        margin: 0;
+                        padding: 0;
+                    }
+
                     ul a {
                         float: left;
                         color: #f2f2f2;

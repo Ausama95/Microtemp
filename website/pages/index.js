@@ -15,7 +15,7 @@ export default function Home({ microNumber }) {
   const user = fire.auth().currentUser;
   const [notification, setNotification] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
-  const time = Math.round(new Date().getTime()/ 1000)
+  const time = Math.round(new Date()/ 1000)
 
   fire.auth()
     .onAuthStateChanged((user) => {
@@ -61,7 +61,7 @@ export default function Home({ microNumber }) {
   }
 
   // ------------------------------------------------------If Chep is online--------------
-  if (data.Timestamp > time - 10) {
+  if (data.Timestamp < time - 10) {
     return (
       <div className={styles.container}>
         <Head>
@@ -150,8 +150,7 @@ export default function Home({ microNumber }) {
       </Head>
 
       <main className={styles.main}>
-
-        {!loggedIn
+        {/* {!loggedIn
           ?
           <div>
             <Link href="/users/register">

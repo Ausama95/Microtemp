@@ -6,6 +6,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 from firebase import firebase
+import time
 
 cred = credentials.Certificate("bbc-microbit-sensor-firebase-adminsdk-xilte-c922667b53.json")
 firebase_admin.initialize_app(cred)
@@ -66,6 +67,7 @@ while True:
         deviceName = deviceName.replace("'","")
 
         now = int(datetime.datetime.today().strftime("%Y%m%d%H"))
+        now3 = int(time.time())
         date = str(datetime.datetime.today().strftime("%Y/%m/%d %H:%M"))
 
         #Temp............................................................................
@@ -119,7 +121,7 @@ while True:
             u'Light_Max' : lightMax,
             u'Light_Low' : lightLow,
             u'Date' : date,
-            u'Timestamp' : now
+            u'Timestamp' : now3
         }
 
         # Add the data structure to Firebase under the defined heading... 'MyTemperature'
@@ -137,7 +139,7 @@ while True:
             u'Light_Max' : lightMax,
             u'Light_Low' : lightLow,
             u'Date' : date,
-            u'Timestamp' : now
+            u'Timestamp' : now3
         }
 
         #Realtime database
