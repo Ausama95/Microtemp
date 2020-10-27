@@ -1,0 +1,15 @@
+serial.redirect(SerialPin.USB_TX, SerialPin.USB_RX, BaudRate.BAUD_RATE115200)
+serial.redirect_to_usb()
+
+def on_forever():
+    serial.write_line("start")
+    serial.write_line("" + str((control.device_serial_number())))
+    serial.write_number(input.temperature())
+    serial.write_line(" ")
+    basic.show_number(input.temperature())
+    basic.pause(500)
+    serial.write_number(input.light_level())
+    serial.write_line(" ")
+    basic.show_number(input.light_level())
+    basic.pause(500)
+basic.forever(on_forever)
