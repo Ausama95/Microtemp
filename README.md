@@ -47,10 +47,10 @@ ser.port = "COM3"
 
 
 4- you need to copy the code from "MicrobitCode.py" and put it inside the Microbit by using the [Micro Code Editor](https://microbit.org/code/)
- 1- Create a new projet.
- 2- Select Python from menu bar at the top in the editor page.
- 3- Paste the code.
- 4- Click on Download.
+ - Create a new projet.
+ - Select Python from menu bar at the top in the editor page.
+ - Paste the code.
+ - Click on Download.
 
 5- To register a new user in the website Click [here](https://microtemp.vercel.app/users/register)
 
