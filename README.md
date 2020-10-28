@@ -1,7 +1,7 @@
 # Microtemp
 ## Microbit project
 
-You can fin the website [here] (https://microtemp.vercel.app/)
+You can fin the website [here](https://microtemp.vercel.app/)
 
 Packages you need to install for the Website:
 
@@ -15,7 +15,7 @@ To run the website on `localhost:3000`
 - Use `npm run dev`
 
 
-2- you need to install Python from [here] (https://www.python.org/downloads/)
+2- you need to install Python from [here](https://www.python.org/downloads/)
 
 Packages you need to install for the Microbit program:
 Run all these comaneds in Windows CMD.
@@ -41,7 +41,7 @@ ser.port = "COM3"
   - Look in the Device Manager list, open the category "Ports" and find the matching COM Port.
   - Take the number in the bracket behind the port description.
 
-4- you need to copy the code from "MicrobitCode.py" and put it inside the Microbit by using the [Micro Code Editor] (https://microbit.org/code/)
+4- you need to copy the code from "MicrobitCode.py" and put it inside the Microbit by using the [Micro Code Editor](https://microbit.org/code/)
  1- Create a new projet.
  2- Select Python from menu bar at the top in the editor page.
  3- Paste the code.
