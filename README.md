@@ -7,35 +7,35 @@ You can find the website [here](https://microtemp.vercel.app/)
 
 1- you need to install React's library in the website file
 
-To install React! 
-Open a terminal in the file "website" and run the command:
-- `npm install next react react-dom`
+To install React!
+- Open a terminal in the file "website" and run the command:
+ - `npm install next react react-dom`
 
 To run the website on `localhost:3000`
-- Use `npm run dev`
+ - Use `npm run dev`
 
 
 
 2- you need to install Python from [here](https://www.python.org/downloads/)
 
 Packages you need to install for the Microbit program:
-Run all these comaneds in Windows CMD.
+- Run all these comaneds in Windows CMD.
 
-- `pip install firebase`
-- `pip install pyserial`
-- `pip install firebase-admin`
-- `pip install python_jwt`
-- `pip install --upgrade gcloud`
-- `pip install sseclient`
-- `pip install pycrypto`
-- `pip install cryptography`
-- `pip install pycryptodome`
-- `pip install pycryptodomex`
+ - `pip install firebase`
+ - `pip install pyserial`
+ - `pip install firebase-admin`
+ - `pip install python_jwt`
+ - `pip install --upgrade gcloud`
+ - `pip install sseclient`
+ - `pip install pycrypto`
+ - `pip install cryptography`
+ - `pip install pycryptodome`
+ - `pip install pycryptodomex`
 
 
 
 3- Update the "COM Port" based on your system
-Open `database_sync2.py` in a text editor program and change line 21 to what ever COM Port numer the chip is using by replacing "COM3":
+- Open `database_sync2.py` in a text editor program and change line 21 to what ever COM Port numer the chip is using by replacing "COM3":
 ```py
 ser.port = "COM3"
 ```
