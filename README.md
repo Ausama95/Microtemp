@@ -1,7 +1,7 @@
 # Microtemp
 ## Microbit project
 
-You can fin the website [here](https://microtemp.vercel.app/)
+You can find the website [here](https://microtemp.vercel.app/)
 
 
 
