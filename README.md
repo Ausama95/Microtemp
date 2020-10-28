@@ -9,10 +9,10 @@ You can find the website [here](https://microtemp.vercel.app/)
 
 To install React!
 - Open a terminal in the file "website" and run the command:
- - `npm install next react react-dom`
+  - `npm install next react react-dom`
 
 To run the website on `localhost:3000`
- - Use `npm run dev`
+  - Use `npm run dev`
 
 
 
@@ -21,16 +21,16 @@ To run the website on `localhost:3000`
 Packages you need to install for the Microbit program:
 - Run all these comaneds in Windows CMD.
 
- - `pip install firebase`
- - `pip install pyserial`
- - `pip install firebase-admin`
- - `pip install python_jwt`
- - `pip install --upgrade gcloud`
- - `pip install sseclient`
- - `pip install pycrypto`
- - `pip install cryptography`
- - `pip install pycryptodome`
- - `pip install pycryptodomex`
+  - `pip install firebase`
+  - `pip install pyserial`
+  - `pip install firebase-admin`
+  - `pip install python_jwt`
+  - `pip install --upgrade gcloud`
+  - `pip install sseclient`
+  - `pip install pycrypto`
+  - `pip install cryptography`
+  - `pip install pycryptodome`
+  - `pip install pycryptodomex`
 
 
 
