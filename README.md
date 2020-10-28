@@ -3,7 +3,7 @@
 
 You can fin the website [here](https://microtemp.vercel.app/)
 
-Packages you need to install for the Website:
+
 
 1- you need to install React's library in the website file
 
@@ -13,6 +13,7 @@ Open a terminal in the file "website" and run the command:
 
 To run the website on `localhost:3000`
 - Use `npm run dev`
+
 
 
 2- you need to install Python from [here](https://www.python.org/downloads/)
@@ -31,6 +32,8 @@ Run all these comaneds in Windows CMD.
 - `pip install pycryptodome`
 - `pip install pycryptodomex`
 
+
+
 3- Update the "COM Port" based on your system
 Open `database_sync2.py` in a text editor program and change line 21 to what ever COM Port numer the chip is using by replacing "COM3":
 ```py
@@ -41,11 +44,16 @@ ser.port = "COM3"
   - Look in the Device Manager list, open the category "Ports" and find the matching COM Port.
   - Take the number in the bracket behind the port description.
 
+
+
 4- you need to copy the code from "MicrobitCode.py" and put it inside the Microbit by using the [Micro Code Editor](https://microbit.org/code/)
  1- Create a new projet.
  2- Select Python from menu bar at the top in the editor page.
  3- Paste the code.
  4- Click on Download.
 
+5- To register a new user in the website Click [here](https://microtemp.vercel.app/users/register)
+
 For further questions, you can contact me at `Ausama95@yahoo.com`
+
 Developed by: Osama Khalid Walid Ahmed
