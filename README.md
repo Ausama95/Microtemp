@@ -3,7 +3,18 @@
 
 You can find the website [here](https://microtemp.vercel.app/)
 
+## About the project
+Web application for monitoring and measuring the room's temperature & light level with a Microbit placed inside the room.
 
+## Features
+ - The website can read/show live data from the Microbit and updates every 1-3 seconds without the need to reload the page.
+ - The webpage "statistics" showes stored data for every hour, and show it on a table.
+ - If the Microbit isn't connected or the needed software not running, then the website will show a warning.
+ - The user can login and change the room's/Microbit's name from the webpage.
+ - Only one MicroBit is supported on one system.
+ - The used can register new useres from the provided link: https://microtemp.vercel.app/users/register
+
+## installations steps
 
 1- you need to install React's library in the website file
 
@@ -53,6 +64,11 @@ ser.port = "COM3"
  - Click on Download.
 
 5- To register a new user in the website Click [here](https://microtemp.vercel.app/users/register)
+
+## Run the program
+1- Open the [website](https://microtemp.vercel.app/)
+2- conect the microbit via USB.
+3- Run the file `database_sync2.py` in the folder `Main`
 
 For further questions, you can contact me at `Ausama95@yahoo.com`
 
